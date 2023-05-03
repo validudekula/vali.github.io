@@ -7,6 +7,43 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+#icon{
+    width: 40px;
+    cursor: pointer;
+    margin-left: 2%;
+
+}
+.icon:hover{
+    color: #05b4ff;
+}
+
+:root{
+    --color-primary:#191D2B;
+    --color-secondary: #05b4ff;
+    --color-grey0: #d1d1d1;
+    --color-white: #fff;
+    --color-black: black;
+    --color-grey2: #333;
+    --color-grey1: #5C5C5C;
+    --color-grey3: black;
+    --color-white1: #FFF;
+    --color-pink: #ff007f;
+    --colour-image: url(images/mastan11.jpg);
+}
+.dark-theme{
+    --color-primary: #DEDEDE;
+    --color-secondary: #ff007f;
+    --color-grey0: #191d2b;
+    --color-white:  black;
+    --color-black: white;
+    --color-grey2: #E8E8E8;
+    --color-grey1: #BABABA;
+    --color-grey3: white;
+    --color-white1: #D1D1D1;
+    --color-pink: #05b4ff;
+    --colour-image: url(images/mastan11.jpg);
+
+}
 html{
     scroll-behavior: smooth;
 }
@@ -71,9 +108,9 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    color: var(--color-secondary);
     padding: 0 5px;
-    background: #fff;
+    background: var(--color-white1);
     transform: translateX(-50%);
 }
 
@@ -88,7 +125,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background: var(--color-secondary);
 }
 .navbar .max-width{
     display: flex;
@@ -96,16 +133,16 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #fff;
+    color: var(--color-white1);
     font-size: 35px;
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: crimson;
+    color: var(--color-secondary);
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
-    color: #fff;
+    color:var(--color-pink);
 }
 .navbar .menu li{
     list-style: none;
@@ -113,22 +150,22 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: var(--color-white1);
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: crimson;
+    color: var(--color-secondary);
 }
 .navbar.sticky .menu li a:hover{
-    color: #fff;
+    color: var(--color-white1);
 }
 
 /* menu btn styling */
 .menu-btn{
-    color: #fff;
+    color: var(--color-white1);
     font-size: 23px;
     cursor: pointer;
     display: none;
@@ -137,12 +174,12 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background: var(--color-secondary);
     right: 30px;
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: #fff;
+    color: var(--color-white1);
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
@@ -162,17 +199,43 @@ section .title::after{
 }
 
 /* home section styling */
+.background{
+    height: 100%;
+    color: var(--color-white1);
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    background-image: var(--colour-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: relative;
+    content: '';
+    opacity: 0.8;
+}
 .home{
     display: flex;
-    background: url("images/images\ \(1\).jpeg") no-repeat center;
     height: 100vh;
-    color: #fff;
+    color: var(--color-white1);
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
-    opacity: 0.8;
+    background-image: var(--colour-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: relative;
+    content: '';
 }
+
 .home .max-width{
   width: 100%;
   display: flex;
@@ -187,36 +250,42 @@ section .title::after{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+    color: var(--color-secondary);
 }
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: crimson;
+    color: var(--color-secondary);
     font-weight: 500;
 }
 .home .home-content a{
     display: inline-block;
-    background: crimson;
-    color: #fff;
+    background: var(--color-secondary);
+    color: var(--color-white);
     font-size: 25px;
     padding: 4px 11px;
     margin-top: 20px;
     margin-right: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid var(--color-secondary);
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: crimson;
+    color: var(--color-secondary);
     background: none;
 }
 
 /* about section styling */
+.about{
+    background-color: var(--color-grey0);
+    color: var(--color-black);
+}
 .about .title::after{
     content: "who i am";
+    background: var(--color-grey0);
 }
 .about .about-content .left{
     width: 45%;
@@ -234,48 +303,48 @@ section .title::after{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: var(--color-black);
 }
 .about .about-content .right .text span{
-    color: crimson;
+    color: var(--color-secondary);
 }
 .about .about-content .right p{
     text-align: justify;
 }
 .about .about-content .right a{
     display: inline-block;
-    background: crimson;
-    color: #fff;
+    background: var(--color-secondary);
+    color: var(--color-black);
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid var(--color-secondary);
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
-    color: crimson;
+    color: var(--color-secondary);
     background: none;
 }
 
 /* services section styling */
 .services, .teams{
-    color:#fff;
-    background: #111;
-    opacity: 0.8;
+    color: var(--color-white);
+    background: var(--color-primary);
+   
 }
 .services .title::before,
 .teams .title::before{
-    background: #fff;
+    background: var(--color-black);
 }
 .services .title::after,
 .teams .title::after{
-    background: #111;
+    background: var(--color-primary);
     content: "virtual interships";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
-    background: #222;
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
@@ -283,7 +352,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .services .serv-content .card:hover{
-    background: crimson;
+    background: var(--color-secondary);
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -293,7 +362,7 @@ section .title::after{
 }
 .services .serv-content .card i{
     font-size: 50px;
-    color: crimson;
+    color: var(--color-secondary);
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
@@ -306,9 +375,14 @@ section .title::after{
 }
 
 /* skills section styling */
+.skills{
+    background-color: var(--color-grey0);
+    color: var(--color-black);
+}
 
 .skills .title::after{
     content: "what i know";
+    background: var(--color-grey0);
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
@@ -323,18 +397,18 @@ section .title::after{
 }
 .skills .skills-content .left a{
     display: inline-block;
-    background: crimson;
-    color: #fff;
+    background: var(--color-secondary);
+    color: var(--color-white);
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid var(--color-secondary);
     transition: all 0.3s ease;
 }
 .skills .skills-content .left a:hover{
-    color: crimson;
+    color: var(--color-secondary);
     background: none;
 }
 .skills .skills-content .right .bars{
@@ -353,7 +427,7 @@ section .title::after{
 .skills .skills-content .right .line{
     height: 5px;
     width: 100%;
-    background: lightgrey;
+    background: var(--color-grey1);
     position: relative;
 }
 .skills .skills-content .right .line::before{
@@ -362,7 +436,7 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
-    background: crimson;
+    background: var(--color-secondary);
 }
 .skills-content .right .html::before{
     width: 50%;
@@ -385,7 +459,8 @@ section .title::after{
 
 /* teams section styling */
 .teams{
-    opacity: 0.8;
+    
+    background-color: var(--color-primary);
 }
 
 .teams .title::after{
@@ -400,7 +475,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover{
-    background: crimson;
+    background: var(--color-secondary);
 }
 .teams .carousel .card .box{
     display: flex;
@@ -422,18 +497,12 @@ section .title::after{
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid crimson;
+    border: 5px solid var(--color-secondary);
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
-    border-color: #fff;
+    border-color: var(--color-white);
 }
-
-
-
-
-
-
 
 .owl-dots{
     text-align: center;
@@ -445,7 +514,7 @@ section .title::after{
     margin: 0 5px;
     outline: none!important;
     border-radius: 50%;
-    border: 2px solid crimson!important;
+    border: 2px solid var(--color-secondary)!important;
     transition: all 0.3s ease;
 }
 .owl-dot.active{
@@ -454,12 +523,18 @@ section .title::after{
 }
 .owl-dot.active,
 .owl-dot:hover{
-    background: crimson!important;
+    background: var(--color-secondary)!important;
 }
 
 /* contact section styling */
+.contact{
+    background-color: var(--color-grey0);
+    color: var(--color-black);
+
+}
 .contact .title::after{
     content: "get in touch";
+    background: var(--color-grey0);
     
 }
 .contact .contact-content .column{
@@ -489,13 +564,13 @@ section .title::after{
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: crimson;
+    color: var(--color-secondary);
 }
 .contact .contact-content .info .head{
     font-weight: 500;
 }
 .contact .contact-content .info .sub-title{
-    color: #333;
+    color: var(--color-grey2);
 }
 .contact .right form .fields{
     display: flex;
@@ -538,7 +613,7 @@ section .title::after{
   align-items: center;
 }
 .right form .button-area button{
-  color: #fff;
+  color: var(--color-white);
   display: block;
   width: 160px!important;
   height: 45px;
@@ -548,19 +623,19 @@ section .title::after{
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
+  background: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover{
-  color: crimson;
+  color: var(--color-secondary);
   background: none;
 }
 /* footer section styling */
 footer{
     background: #111;
     padding: 19px 13px;
-    color: #fff;
+    color: white;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -573,7 +648,7 @@ footer{
     display: table;
 }
 footer span a{
-    color: crimson;
+    color: var(--color-secondary);
     text-decoration: none;
 }
 footer span a:hover{
@@ -749,10 +824,6 @@ footer span a:hover{
     height: 100vh;
   }
 
-
-
-
-
   .portfolios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -772,7 +843,7 @@ footer span a:hover{
   .portfolios .portfolio-item .hover-items {
     width: 100%;
     height: 100%;
-    background-color: crimson;
+    background-color: var(--color-secondary);
     position: absolute;
     left: 0;
     top: 0;
@@ -824,10 +895,6 @@ footer span a:hover{
     transform: scale(1);
   }
 
-
-
-
-
   .intro-social {
 	display: inline-block; 
 	position: absolute;
@@ -838,7 +905,7 @@ footer span a:hover{
 	margin: 0;
 	padding: 0;
     text-align: center;
-    color: #FFFFFF !important;
+    color: var(--color-white1) !important;
 	border-color: rgba(255, 255, 255, 0.3);
 	height: 6rem !important;
 	line-height: 5.4rem !important;
@@ -854,10 +921,10 @@ footer span a:hover{
 	padding: 0;
 }
 .intro-social li a, .intro-social li a:visited {
-	color: #FFFFFF;
+	color: var(--color-white1);
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: crimson;
+	color: var(--color-secondary);
 }
 
 .intro-social .button:hover, .intro-social .button:focus {

@@ -25,7 +25,7 @@
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">Mastan Portfo<span>lio.</span></a></div>
-            <ul class="menu">
+            <ul class="menu" style="flex: 1; text-align: right;">
                 <li><a href="#home" class="menu-btn">HOME</a></li>
                 <li><a href="#about" class="menu-btn">ABOUT</a></li>
                 <li><a href="#services" class="menu-btn">CERTIFICATES</a></li>
@@ -33,6 +33,7 @@
                 <li><a href="#teams" class="menu-btn">PROJECTS</a></li>
                 <li><a href="#contact" class="menu-btn">HIRE ME</a></li>
             </ul>
+            <img src="images/sun.png" id="icon" style="color: #05b4ff;">
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
@@ -40,12 +41,13 @@
     </nav>
 
     <!-- home section start -->
+    <div class="background">
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1">Hello<span style="color: crimson;">,</span> my name is</div><br>
+                <div class="text-1"><b>Hello, my name is</b></div><br>
                 <div class="text-2">DUDEKULA MASTAN VALI</div><br>
-                <div class="text-3">And I<span style="color: crimson;">'</span>m a <span class="typing"></span></div>
+                <div class="text-3"><b>And I'm a</b> <span class="typing"></span></div>
 
                 <a href="https://in.linkedin.com/in/validudek?trk=profile-badge"><i class="fa fa-linkedin"></i></a>
                 <a href="https://github.com/validudekula"><i class="fa fa-github"></i></a>
@@ -61,6 +63,7 @@
 
         </div>
     </section>
+    </div>
 
     <!-- about section start -->
     <section class="about" id="about">
@@ -387,9 +390,22 @@
     
     <!-- footer section start -->
     <footer>
-        <span>Created By <a href="https://github.com/validudekula">Dudekula mastan vali(Github)</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+        <span>Created By <a href="#"> Dudekula mastan vali </a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "images/moon.png";
+            }else{
+                icon.src = "images/sun.png";
+            }
+        }
+
+    </script>
 </body>
 </html>
